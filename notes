@@ -1,0 +1,28 @@
+MONGO / SCRAPING NOTES
+
+////// TO START MONGODB \\\\\
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
+
+To Run MongoDB
+"C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe"
+((Must have the quotation marks))
+To Connect to MongoDB
+"C:\Program Files\MongoDB\Server\3.4\bin\mongo.exe"
+
+- Start up a new database by switching to it.
+-- NOTE: The db does not exist until you create a collection.
+
+- For sorting entries, type this into the cl
+"db.collection.find().sort({field_name:1})"
+-- NOTE: the 1 is for acending results; -1 is for decending
+
+
+db.collection.update(
+   {'source':'Vigilant Citizen'},
+   {'image':'',
+   {
+     upsert: <boolean>,
+     multi: <boolean>,
+     writeConcern: <document>
+   }
+)
